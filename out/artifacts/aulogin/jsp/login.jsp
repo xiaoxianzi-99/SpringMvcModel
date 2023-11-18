@@ -55,6 +55,7 @@
         } else if($("input[name='loginer']:checked").val() === "用户登录"){
             event.preventDefault();
         }else{
+            alert("请选择以什么身份登录");
             event.preventDefault();
         }
     });

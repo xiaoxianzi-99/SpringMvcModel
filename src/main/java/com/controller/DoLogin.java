@@ -33,6 +33,7 @@ import java.util.Map;
 public class DoLogin {
     //登录
     @RequestMapping("/DoLogin")
+    //管理员登录
     public String login(User user, HttpSession session, HttpServletResponse response, HttpServletRequest request, @RequestParam("icode") String icode) throws IOException {
         String realCode = (String) session.getAttribute("code");
         String autoLogin =request.getParameter("autoLogin");
@@ -78,6 +79,7 @@ public class DoLogin {
 
     @ResponseBody
     @RequestMapping("/loadcode")
+    //验证码
     public void loadcode(HttpServletRequest request, HttpServletResponse response)throws Exception {
         final int W = 100;
         final int H = 30;
@@ -97,6 +99,7 @@ public class DoLogin {
     }
 
     @RequestMapping("/relogin")
+    //用户登录
     public String relogin(){
         return "login";
     }

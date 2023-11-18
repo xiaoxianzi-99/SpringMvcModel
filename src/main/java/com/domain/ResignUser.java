@@ -11,6 +11,7 @@ public class ResignUser {
     String username;
     String password;
 
+    @Email
     String email;
     String realname;
     String[] gender;

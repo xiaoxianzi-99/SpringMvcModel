@@ -12,6 +12,6 @@ import java.util.ArrayList;
  */
 public interface RegisterService {
     boolean addUser(ResignUser resignUser);
-    ArrayList<User> getResignUser();
+    ArrayList<ResignUser> getResignUser();
 
 }
